@@ -57,8 +57,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     func reverseGeocoding(location: CLLocation) {
         CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
-            if let error = error {
-                print(error.localizedDescription)
+            if let _ = error {
+                self.weatherLocation.text = ""
                 return
             } else if let placemarks = placemarks {
                 let pm = placemarks[0]
