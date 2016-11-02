@@ -43,6 +43,12 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: - Helper
     
+    
+    /// Gets weather of current location and updates UI
+    ///
+    /// - Parameters:
+    ///     - latitude: location's latitude coordinate
+    ///     - longitude: location's longitude coordinate
     func getWeather(latitude: String, longitude: String) {
         DarkSkyService.weatherForCoordinates(latitude: latitude, longitude: longitude, completion: { data, error in
             if let _ = error {
@@ -55,6 +61,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         })
     }
     
+    /// Gets city name of given location and updates UI
+    ///
+    /// - Parameters:
+    ///     - location: location to be reverse geocoded
     func reverseGeocoding(location: CLLocation) {
         CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
             if let _ = error {
