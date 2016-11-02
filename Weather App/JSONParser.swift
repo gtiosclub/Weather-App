@@ -2,7 +2,7 @@
 //  JSONParser.swift
 //  Weather App
 //
-//  Created by Alejandrina Patron on 11/1/16.
+//  Created by Alejandrina Patron on 11/2/16.
 //  Copyright © 2016 Georgia Tech iOS Club. All rights reserved.
 //
 

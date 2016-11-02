@@ -22,6 +22,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
     
