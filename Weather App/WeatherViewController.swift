@@ -32,8 +32,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         if let location = locations.first {
             let latitude = String(format: "%.2f", location.coordinate.latitude)
             let longitude = String(format: "%.2f", location.coordinate.longitude)
-            getWeather(latitude: latitude, longitude: longitude)
             reverseGeocoding(location: location)
+            getWeather(latitude: latitude, longitude: longitude)
         }
     }
     

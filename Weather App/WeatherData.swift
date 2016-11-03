@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WeatherData {
+struct WeatherData {
     
     var name: String
     var temperature: String
