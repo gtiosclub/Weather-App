@@ -10,6 +10,10 @@ import SwiftyJSON
 
 struct JSONParser {
     
+    /// Parses the result of a network request
+    ///
+    /// - Parameters:
+    ///     - data: data to be parsed
     static func parseWeatherData(data: Any) -> WeatherData? {
         let json = JSON(data)
         let currentWeather = json["currently"]

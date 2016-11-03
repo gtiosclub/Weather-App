@@ -80,12 +80,14 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: - IBAction
 
+    /// Requests user's location and updates UI
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
         locationManager.requestLocation()
     }
     
     // MARK: - Alerts
     
+    /// Shows error alert when something goes wron with a network request
     func showErrorAlert() {
         let alert = UIAlertController(title: "Oops!", message: "Something went wrong, please try again.", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -93,6 +95,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    /// Shows error alert when a user's location could not be determined
     func showLocationErrorAlert() {
         let alert = UIAlertController(title: "Oops!", message: "I could not determine your location.", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -103,6 +106,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension String {
+    
+    /// Get a forecast icon's corresponding emoji
     func getEmoji() -> String {
         switch self {
         case "clear-day":
